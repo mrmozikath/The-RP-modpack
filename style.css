@@ -82,7 +82,7 @@ section {
 
 
 /* Page Lois : fond transparent */
-.video-page {
+.lois-page {
     background: transparent !important;
 }
 
@@ -117,4 +117,5 @@ section {
     padding: 20px;
     border-radius: 12px;
 }
+
 
