@@ -6,32 +6,33 @@
 <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="lois-page">
+
+<!-- Vidéo background -->
 <div class="bg-video-wrap">
-  <div id="player"></div>
+    <div id="player"></div>
 </div>
 
 <script>
-  // 1) charge l'API YouTube
   var tag = document.createElement('script');
   tag.src = "https://www.youtube.com/iframe_api";
   var firstScriptTag = document.getElementsByTagName('script')[0];
   firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-  // 2) crée le lecteur
   function onYouTubeIframeAPIReady() {
     new YT.Player('player', {
-      videoId: "eBExtYRpuqI",          // <= remplace par l'ID de ta vidéo
+      videoId: "eBExtYRpuqI",
       playerVars: {
-        autoplay: 1, 
+        autoplay: 1,
+        mute: 1,
         loop: 1,
-        mute: 1, 
         controls: 0,
         modestbranding: 1,
-        playlist: "eBExtYRpuqI"       // nécessaire pour le loop :contentReference[oaicite:2]{index=2}
+        rel: 0,
+        playlist: "eBExtYRpuqI"
       },
       events: {
-        onReady: function(event) {
+        onReady: function (event) {
           event.target.playVideo();
         }
       }
@@ -39,9 +40,6 @@
   }
 </script>
 
-
-
-    
 <header>
     <h1>Lois de la ville</h1>
     <p>Règlement officiel RP</p>
@@ -57,20 +55,19 @@
     <a href="galerie.html">Galerie</a>
 </nav>
 
-
 <section>
     <h2>Lois générales</h2>
     <ul>
         <li>Le grief est interdit.</li>
         <li>Le vol doit avoir une justification RP.</li>
-        <li>Le respect entre joueurs est obligatoire (moquerie autorisé).</li>
+        <li>Le respect entre joueurs est obligatoire (moquerie autorisée).</li>
     </ul>
 
     <h2>Lois de la ville</h2>
     <ul>
         <li>Les armes sont interdites dans la mairie.</li>
         <li>Les conflits doivent être déclarés.</li>
-        <li>Les constructions dérangeantes et grosses (ex : statue) doivent être validées.</li>
+        <li>Les constructions dérangeantes doivent être validées.</li>
     </ul>
 
     <h2>Sanctions</h2>
@@ -86,6 +83,3 @@
 
 </body>
 </html>
-
-
-
