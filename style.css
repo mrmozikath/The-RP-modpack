@@ -49,5 +49,11 @@ footer {
     font-size: 14px;
 }
 
+.fill-closing-horizontal {
+    -webkit-user-select: none;
+    display: inline;
+    text-decoration: none;
+    padding: 10px
+}
 
 
