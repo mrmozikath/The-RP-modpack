@@ -56,22 +56,29 @@ footer {
     padding: 10px
 }
 
-/* vidéo en arrière-plan */
-.video-background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    overflow: hidden;
+/* vidéo en fond */
+.bg-video-wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  overflow: hidden;
 }
 
-.video-background iframe {
-    width: 100%;
-    height: 100%;
-    pointer-events: none; /* empêche de cliquer sur la vidéo */
+#player iframe {
+  width: 100vw;
+  height: 100vh;
 }
 
+/* lisibilité du texte */
+section {
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 30px auto;
+}
 
 
