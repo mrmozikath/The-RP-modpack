@@ -8,6 +8,11 @@
 
 <body class="lois-page">
 
+<!-- Vidéo background -->
+<div class="bg-video-wrap">
+    <div id="player"></div>
+</div>
+
 <script>
   var tag = document.createElement('script');
   tag.src = "https://www.youtube.com/iframe_api";
@@ -16,7 +21,7 @@
 
   function onYouTubeIframeAPIReady() {
     new YT.Player('player', {
-      videoId: "FqnAV6tkwzA",
+      videoId: "eBExtYRpuqI",
       playerVars: {
         autoplay: 1,
         mute: 1,
@@ -24,7 +29,7 @@
         controls: 0,
         modestbranding: 1,
         rel: 0,
-        playlist: "FqnAV6tkwzA"
+        playlist: "eBExtYRpuqI"
       },
       events: {
         onReady: function (event) {
@@ -77,6 +82,7 @@
 
 </body>
 </html>
+
 
 
 
