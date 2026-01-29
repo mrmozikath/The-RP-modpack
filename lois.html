@@ -7,13 +7,38 @@
 </head>
 
 <body>
-<div class="video-background">
-    <iframe
-        src="https://www.youtube.com/embed/eBExtYRpuqI?autoplay=1&mute=1&loop=1&playlist=VIDEO_ID&controls=0&showinfo=0&modestbranding=1"
-        frameborder="0"
-        allow="autoplay; fullscreen">
-    </iframe>
+<div class="bg-video-wrap">
+  <div id="player"></div>
 </div>
+
+<script>
+  // 1) charge l'API YouTube
+  var tag = document.createElement('script');
+  tag.src = "https://www.youtube.com/iframe_api";
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+  // 2) crée le lecteur
+  function onYouTubeIframeAPIReady() {
+    new YT.Player('player', {
+      videoId: "eBExtYRpuqI",          // <= remplace par l'ID de ta vidéo
+      playerVars: {
+        autoplay: 1, 
+        loop: 1,
+        mute: 1, 
+        controls: 0,
+        modestbranding: 1,
+        playlist: "eBExtYRpuqI"       // nécessaire pour le loop :contentReference[oaicite:2]{index=2}
+      },
+      events: {
+        onReady: function(event) {
+          event.target.playVideo();
+        }
+      }
+    });
+  }
+</script>
+
 
 
     
@@ -61,5 +86,6 @@
 
 </body>
 </html>
+
 
 
