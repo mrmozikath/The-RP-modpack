@@ -21,7 +21,7 @@
 
   function onYouTubeIframeAPIReady() {
     new YT.Player('player', {
-      videoId: "MmB9b5njVbA",
+      videoId: "7amwjJEeytU",
       playerVars: {
         autoplay: 1,
         mute: 1,
@@ -29,7 +29,7 @@
         controls: 0,
         modestbranding: 1,
         rel: 0,
-        playlist: "MmB9b5njVbA"
+        playlist: "PLFfUVs7JWNx8Nt2tXJVEu_7ptZGE-ZIhc"
       },
       events: {
         onReady: function (event) {
@@ -55,6 +55,20 @@
     <a href="galerie.html">Galerie</a>
 </nav>
 
+
+<button onclick="document.getElementById('yt').src += ''">
+  ▶️ Lancer la musique
+</button>
+
+<iframe
+  id="yt"
+  width="0"
+  height="0"
+  src="https://www.youtube.com/embed/7amwjJEeytU?autoplay=1&loop=1&playlist=PLFfUVs7JWNx8Nt2tXJVEu_7ptZGE-ZIhc"
+  frameborder="0"
+  allow="autoplay">
+</iframe>
+    
 
 <section>
     <h2>Lien de téléchargement</h2>
@@ -84,6 +98,7 @@
 
 </body>
 </html>
+
 
 
 
