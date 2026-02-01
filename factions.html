@@ -21,7 +21,7 @@
 
   function onYouTubeIframeAPIReady() {
     new YT.Player('player', {
-      videoId: "FqnAV6tkwzA",
+      videoId: "h8UpC5JbMU0",
       playerVars: {
         autoplay: 1,
         mute: 1,
@@ -29,7 +29,7 @@
         controls: 0,
         modestbranding: 1,
         rel: 0,
-        playlist: "FqnAV6tkwzA"
+        playlist: "h8UpC5JbMU0"
       },
       events: {
         onReady: function (event) {
@@ -55,6 +55,18 @@
     <a href="galerie.html">Galerie</a>
 </nav>
 
+<button onclick="document.getElementById('yt').src += ''">
+  ▶️ Lancer la musique
+</button>
+
+<iframe
+  id="yt"
+  width="0"
+  height="0"
+  src="https://www.youtube.com/embed/h8UpC5JbMU0?autoplay=1&loop=1&playlist=h8UpC5JbMU0"
+  frameborder="0"
+  allow="autoplay">
+</iframe>
 
 <section>
     <h2>Gold Empire</h2>
@@ -90,6 +102,7 @@
 
 </body>
 </html>
+
 
 
 
